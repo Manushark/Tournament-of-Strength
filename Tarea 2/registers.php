@@ -19,6 +19,17 @@ if (isset($_GET['codigo'])) {
 <h1>👾Registro de participantes</h1>
 <p>Por favor, ingrese los datos del participante</p>
 
+<?php if (isset($_GET['codigo']) && $fighter): ?>
+  <div style="margin:10px;">
+    <a href="eliminar.php?id=<?php echo $_GET['codigo']; ?>" 
+       class="boton" 
+       onclick="return confirm('¿Estás seguro de eliminar este participante?');">
+      ❌ Eliminar
+    </a>
+  </div>
+  
+<?php endif; ?>
+
 <form method="post" action="guardar.php">
   <?php 
     echo my_input("identificacion", "Identificación", $fighter->identificacion, ['required' => 'required']);

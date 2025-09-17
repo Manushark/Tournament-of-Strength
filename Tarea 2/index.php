@@ -5,7 +5,7 @@
 
         <h1>¡Bienvenido al torneo de la fuerza💪🏼⚡!</h1>
         <p>¡Participa en el torneo de la fuerza y demuestra que eres el guerrero más fuerte de todos!</p>
-        <a href="login.php">Iniciar sesión</a>
+       
         
 
     </div>
@@ -20,6 +20,8 @@
                 <th>Foto</th>
                 <th>Nombre</th>
                 <th>Edad</th>
+                <th>Signo zodiacal</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +35,7 @@
                     <td>{$fighter->nombre} {$fighter->apellido}</td>
                     <td>{$fighter->edad()}</td>
                     <td>{$fighter->signo_zodiacal()}</td>
-                    <td><a href='registers.php?codigo={$fighter->identificacion}'>Ve detalles</a></td>
+                    <td><a href='registers.php?codigo={$fighter->identificacion}'>Editar</a></td>
                 </tr>
                 ";
             }
